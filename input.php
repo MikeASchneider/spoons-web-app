@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Spoons input</title>
-	
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
+<?php 
+	include "include.php";
+	makeHeader("Spooners Input");
+ ?>
 	<?php 
 		
 		if(isset($_POST['campers']) && isset($_POST['staff'])) {
@@ -36,7 +29,6 @@
 				echo "$camper<br />";
 				$towrite .= $camper . "\n";
 			}
-			$listfilename = "/var/www/html/roflsrules.com/spoons/spoonslist.txt";
 			$listfile = fopen($listfilename, 'w+');
 			fwrite($listfile, $towrite);
 			fclose($listfile);
@@ -49,5 +41,6 @@
 		<textarea rows="15" cols="30" name="staff" id="staff">Staffers list</textarea>
 		<button type="submit">Submit</button>
 	</form>
-</body>
-</html>
+<?php
+	makeFooter();
+?>

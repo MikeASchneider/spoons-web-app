@@ -1,4 +1,5 @@
 <?php 
+	include "include.php";
 	$listfilename = "/var/www/html/roflsrules.com/spoons/spoonslist.txt";
 	$list = fopen($listfilename, "r+");
 	
@@ -17,20 +18,12 @@
 		fwrite($list, $towrite);
 		header("Location: spooned.php");
 	}
+	else {
+		makeHeader("Spoon reporting");
+	}
 	
 	
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Input spoons</title>
-	
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
 	<p>This is the spoon reporting page. Click on someone's name to eliminate them from Spoons.</p>
 	<?php
 		$i = 0;
@@ -39,6 +32,5 @@
 			$i++;
 		}
 		fclose($list);
+		makeFooter();
 	?>
-</body>
-</html>

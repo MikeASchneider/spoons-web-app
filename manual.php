@@ -1,9 +1,13 @@
 <?php
-	$listfilename = "/var/www/html/roflsrules.com/spoons/spoonslist.txt";
+	$listfilename = "spoonslist.txt";
 
 	if(isset($_POST['spoonlist'])) {
 		file_put_contents($listfilename, $_POST['spoonlist']);
 		header('Location: manual.php');
+	}
+	else {
+		include "include.php";
+		makeHeader("Manual Spoon Modification");
 	}
  ?>
 
@@ -28,5 +32,6 @@
 		</textarea>
 		<button type="submit">Submit</button>
 	</form>
-</body>
-</html>
+<?php
+	makeFooter();
+?>
