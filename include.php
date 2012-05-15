@@ -14,13 +14,14 @@
 	<link href='http://fonts.googleapis.com/css?family=Tienne:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet/less" href="styles.less" type="text/css" />
 	<script src="less.js" type="text/javascript"></script>
+	<meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div id="container">
-	<h1>Spoons Web Management</h1>
+	<h1><a href="index.php">Spoons Web Management</a></h1>
 	<div id="nav">
-		<a href="input.php">Input</a>
-		<a href="spooned.php">Reporting</a>
+		<a href="input.php">Input</a> |
+		<a href="spooned.php">Reporting</a> |
 		<a href="manual.php">Manual Editing</a>
 	</div>
 	<h2><?php echo $title ?></h2>

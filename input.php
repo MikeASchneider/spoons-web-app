@@ -36,9 +36,17 @@
 		}
 	
 	?>
+	<p>Input the list of campers under "Campers list" and the list of participating staffers under "Staffers list".</p>
+	<p>The list of campers will be shuffled. The list of staffers will not be shuffled and the staffers will be placed in the list at regular, even intervals.</p>
 	<form method="post" action="input.php">
-		<textarea rows="25" cols="30" name="campers" id="campers">Campers list</textarea>
-		<textarea rows="15" cols="30" name="staff" id="staff">Staffers list</textarea>
+		<div class="inputarea">
+		<h4>Campers list</h4>
+		<textarea rows="25" cols="30" name="campers" id="campers"></textarea>
+		</div>
+		<div class="inputarea">
+		<h4>Staffers list</h4>
+		<textarea rows="25" cols="30" name="staff" id="staff"></textarea>
+		</div>
 		<button type="submit">Submit</button>
 	</form>
 <?php

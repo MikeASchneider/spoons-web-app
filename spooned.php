@@ -24,13 +24,23 @@
 	
 	
 ?>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(".reporting a").click(function() {
+				return confirm("Are you sure you want to eliminate this player?");
+			});
+		});
+	</script>
 	<p>This is the spoon reporting page. Click on someone's name to eliminate them from Spoons.</p>
+	<div class="reporting">
 	<?php
 		$i = 0;
 		foreach ($contestants as $contestant) {
 			echo "<a href=\"spooned.php?spooned=$i\">$contestant</a><br />";
 			$i++;
 		}
+		echo "</div>";
 		fclose($list);
 		makeFooter();
 	?>
