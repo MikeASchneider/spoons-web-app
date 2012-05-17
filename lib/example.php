@@ -1,7 +1,7 @@
 <?php
 include('GoogleVoice.php');
 
-$gv = new GoogleVoice('samuelmirza', 'gar{$9985');
+$gv = new GoogleVoice('user', 'pass');
 
 // call a phone from one of your forwarding phones
 //$gv->callNumber('', '5558675309', 'mobile');
