@@ -3,7 +3,7 @@
 
 	if(isset($_POST['spoonlist'])) {
 		file_put_contents($listfilename, $_POST['spoonlist']);
-		header('Location: manual.php');
+		header('Location: spooned.php');
 	}
 	else {
 		include "include.php";

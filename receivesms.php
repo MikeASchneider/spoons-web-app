@@ -4,6 +4,27 @@
 	$notes = "";
 	$removed = false;
 	$action = "None";
+	if(!isset($_REQUEST['Body'])) {
+		makeHeader("Spooning via text");
+		?>
+		<p>To interact with the spooning management interface via SMS, use the following commands:</p>
+		<ul>
+			<li><strong>Spoon:</strong> To eliminate a player, send "Spoon Player Name".
+			<blockquote>
+			Sent: Spoon ROFL<br />
+			Received: Player ROFL has been eliminated. New target for Snake: Supes.
+			</blockquote></li>
+			
+			<li><strong>Status:</strong> To check the status of a player, send "Status Player Name".
+			<blockquote>
+			Sent: Status ROFL<br />
+			Received: Player ROFL status: Not spooned. ROFL's target: Snake
+			</blockquote></li>
+		</ul>
+		<?php
+		makeFooter();
+		exit(0);
+	}
 	if(substr($_REQUEST['Body'], 0, 5) == 'Spoon') {
 		$action = "spoon";
 		$spooned = substr($_REQUEST['Body'], 6);
@@ -66,8 +87,6 @@
 				$target = $contestants[$key + 1];
 			}
 		}
-	} else {
-		exit(0);
 	}
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";

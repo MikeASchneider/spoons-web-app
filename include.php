@@ -22,7 +22,8 @@
 	<div id="nav">
 		<a href="input.php">Input</a> |
 		<a href="spooned.php">Reporting</a> |
-		<a href="manual.php">Manual Editing</a>
+		<a href="manual.php">Manual Editing</a> |
+		<a href="receivesms.php">SMS</a>
 	</div>
 	<h2><?php echo $title ?></h2>
 		<?php
