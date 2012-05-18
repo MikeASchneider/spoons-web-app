@@ -25,7 +25,7 @@
 		makeFooter();
 		exit(0);
 	}
-	if(substr($_REQUEST['Body'], 0, 5) == 'Spoon') {
+	if(strcasecmp(substr($_REQUEST['Body'], 0, 5), 'Spoon') == 0) {
 		$action = "spoon";
 		$spooned = substr($_REQUEST['Body'], 6);
 		$spoonfile = file_get_contents($listfilename);
@@ -70,7 +70,7 @@
 		
 		file_put_contents($listfilename, $towrite);
 		
-	} elseif (substr($_REQUEST['Body'], 0, 6) == 'Status') {
+	} elseif (strcasecmp(substr($_REQUEST['Body'], 0, 6), 'Status') == 0) {
 		$action = "status";
 		$search = substr($_REQUEST['Body'], 7);
 		$spoonfile = file_get_contents($listfilename);
