@@ -20,6 +20,13 @@
 			Sent: Status ROFL<br />
 			Received: Player ROFL status: Not spooned. ROFL's target: Snake
 			</blockquote></li>
+			<li><strong>Remaining:</strong> To find the number of remaining players, send "Remaining".
+			<blockquote>
+			Sent: Remaining<br />
+			Received: Number of players remaining in Spoons: 18
+			</blockquote>
+			
+			</li>
 		</ul>
 		<?php
 		makeFooter();
@@ -87,6 +94,11 @@
 				$target = $contestants[$key + 1];
 			}
 		}
+	} elseif (strcasecmp(substr($_REQUEST['Body'], 0, 9), 'Remaining') == 0) {
+		$action = "remaining";
+		$spoonfile = file_get_contents($listfilename);
+		$contestants = explode("\n", $spoonfile);
+		$count = count($contestants);
 	}
     header("content-type: text/xml");
     echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
@@ -105,6 +117,9 @@
     		if(isset($target)) {
     			echo " $search's target: $target.";
     		}
+    	}
+    	elseif ($action == "remaining") {
+    		echo "Number of players remaining in spoons: $count";
     	}
     ?></Sms>
 </Response>
