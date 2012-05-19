@@ -5,7 +5,7 @@
 	$removed = false;
 	$action = "None";
 	if(!isset($_REQUEST['Body'])) {
-		makeHeader("Spooning via text");
+		makeHeader("Spooning via text", false);
 		?>
 		<p>To interact with the spooning management interface via SMS, use the following commands:</p>
 		<ul>

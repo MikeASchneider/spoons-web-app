@@ -7,21 +7,9 @@
 	}
 	else {
 		include "include.php";
-		makeHeader("Manual Spoon Modification");
+		makeHeader("Manual Spooning", false);
 	}
  ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Manual spooning</title>
-	
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-</head>
-<body>
 	<p>On this page, you can manually modify the spoons list. Example uses: Fix a typo, re-add an accidentally eliminated player, etc.</p>
 	<form method="post" action="manual.php">
 		<textarea name="spoonlist" rows="30" cols="40"><?php 

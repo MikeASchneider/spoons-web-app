@@ -1,6 +1,6 @@
 <?php 
 	include "include.php";
-	makeHeader("Spooners Input");
+	makeHeader("Spooners Input", false);
  ?>
 	<?php 
 		
@@ -32,7 +32,8 @@
 			$listfile = fopen($listfilename, 'w+');
 			fwrite($listfile, $towrite);
 			fclose($listfile);
-			echo "Successfully wrote file.";
+			echo "<p>Successfully wrote file. View the printable list
+				 <a href=\"printable.php\" target=\"_blank\">here</a>.</p>";
 		}
 	
 	?>

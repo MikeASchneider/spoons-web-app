@@ -1,6 +1,6 @@
 <?php 
 	include "include.php";
-	makeHeader("Spooning homepage");
+	makeHeader("Spooning homepage", false);
  ?>
 	<p>If you're inputting a new set of spooners, go to the <a href="input.php">input page</a>.</p>
 	<p>If you need to report a spooning, go to the <a href="spooned.php">spooning page</a>.</p>
