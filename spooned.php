@@ -34,8 +34,8 @@
 	</script>
 	<p>This is the spoon reporting page. Click on someone's name to eliminate them from Spoons.</p>
 	<p>
-		The printable spoons list is available <a href="printable.php" target="_blank">here</a> 
-		or as a PDF <a href="printable-pdf.php" target="_blank">here</a>.
+		The printable spoons list is available as a PDF
+		<a href="printable-pdf.php" target="_blank">here</a>.
 	</p>
 	<div class="reporting">
 	<?php
