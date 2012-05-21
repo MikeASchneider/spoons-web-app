@@ -23,30 +23,25 @@
 		width: 350px;
 		display: inline-block;
 	}
-	.printleft, .printright{
-		min-width: 200px;
-		display: inline-block;
-		padding: 0;
-		margin: 0;
-		border-top: 1px solid black;
-		border-bottom: 1px solid black;
-		
+	
+	table {
+		border: 1px solid black;
+		border-collapse: collapse;
 	}
-	.printleft {
-		border-left: 1px solid black;
-		border-right: 1px dotted black;
-	}
-	.printright {
-		margin-left: -4px;
-		border-right: 1px solid black;
-	}
-	.contestant {
-		padding: 4px;
+
+	th {
+		padding: 5px 10px;
 		text-align: center;
-		&:not(:last-child) {
-			border-bottom: 1px dotted black;
-		}
+		background: #aaa;
+		border: 1px solid black;
 	}
+
+	td {
+		padding: 5px 10px;
+		text-align: center;
+		border: 1px dotted black;
+	}
+
 }
 
 @media screen and (max-device-width : 400px)
