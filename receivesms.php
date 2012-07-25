@@ -40,7 +40,7 @@
 		
 		$contestants = array_map('trim', $contestants);
 		foreach ($contestants as $contestant) {
-			if($contestant == $spooned) {
+			if(strcasecmp($contestant, $spooned) == 0) {
 				//$notes .= "Contestant: \"$contestant\", spooned: \"$spooned\"";
 				
 				$key = array_search($contestant, $contestants);
